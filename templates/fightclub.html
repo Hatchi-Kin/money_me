@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="w3-container w3-padding">
+    <div class="w3-card-4">
+        <div class="w3-container w3-red">
+          <h3>The first rule of Fight Club is: you do not talk about Fight Club.</h3>
+        </div>
+
+        <form class="w3-container" action="/fightclub" method="POST">
+        <label>First Name</label>
+        <input class="w3-input" type="text" name="name">
+        <label>Message</label>
+        <input class="w3-input" type="text" name="message">
+        <button class="w3-bar-item w3-button  w3-red">Send</button>
+        </form>
+
+    </div> 
+</div>
+
+
+<div class="w3-container">
+ 
+    <section class="w3-section">
+    <table class="w3-table-all">
+        <thead>
+            <tr class="w3-red">
+              <th>last 10 messages from the gang</th>
+              <th> </th>
+            </tr>
+          </thead>
+        <tbody>
+
+            {% for m in msg %}
+
+              <tr>
+                <td>"{{ m[1] }}"</td>
+                <td>{{ m[0]}}</td>
+              </tr>
+
+            {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+</div>
+
+
+{% endblock %}

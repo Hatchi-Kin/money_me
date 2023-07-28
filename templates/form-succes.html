@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="w3-container" id="rankings" style="margin-top:55px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Thank you for your pledge !</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>a confirmation email has NOT been sent to {{ email }}.</p>
+    <div class="w3-container w3-margin-left">
+        <a href="/rankings" onclick="w3_close()" class="w3-button w3-block w3-padding-large w3-red w3-margin" style="width:40%">See where you landed in the rankings !</a>
+        </div>
+</div>
+
+
+{% endblock %}
